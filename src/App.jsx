@@ -162,8 +162,6 @@ function App() {
 
             <div style={styles.navButtons}>
               <button style={styles.secondaryButton} onClick={prev}>Back</button>
-
-              {/* Enable next only if deliveryMethod selected and required fields filled */}
               <button
                 style={
                   donationData.deliveryMethod === "Drop Off"
@@ -293,15 +291,22 @@ function App() {
 
 const styles = {
   container: {
-    maxWidth: '600px',
-    margin: '3rem auto',
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '2rem',
+    background: 'linear-gradient(to bottom right, #e0f2f1, #f1f8e9)',
     fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
+    position: 'relative',
+    overflow: 'hidden',
+  },
+  card: {
+    maxWidth: '600px',
     backgroundColor: '#fff',
     padding: '2rem',
     borderRadius: '8px',
     boxShadow: '0 0 8px rgba(0,0,0,0.1)',
-  },
-  card: {
     minHeight: '350px',
   },
   title: {
